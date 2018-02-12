@@ -1,16 +1,15 @@
 import java.util.*;
 public class RadixStringTester {
     public static void main(String args[]) {
-        int theArray[] = {4,2,5,1,3,18,0,9,6};
+        String theArray[] = {"DELL","HELP","ALSO","BEAR","BACK","IPAD","IPOD","AGRO"};
         sort(theArray);
         for(int j = 0; j < theArray.length; j++) {
             System.out.print(theArray[j] + " ");
         }
         System.out.println(" ");
     }
-    public static void sort(int ary[]) { //ascending order Radix Sort
-        ArrayList<Integer> zeroes = new ArrayList<Integer>(ary.length);
-        ArrayList<Integer> ones = new ArrayList<Integer>(ary.length);
+    public static void sort(String ary[]) { //ascending order Radix Sort
+        ArrayList<String>[] chars = (ArrayList<String>[])new ArrayList[26];
         int mask = 1; //Initially looks at the LSB.
         for(int i = 0; i < 31; i ++) {
             //Cycle through all 31 bits of the integers (but not the sign bit) starting with
