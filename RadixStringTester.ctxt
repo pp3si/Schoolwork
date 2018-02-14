@@ -3,5 +3,5 @@ comment0.target=RadixStringTester
 comment1.params=args
 comment1.target=void\ main(java.lang.String[])
 comment2.params=ary
-comment2.target=void\ sort(int[])
+comment2.target=void\ sort(java.lang.String[])
 numComments=3
