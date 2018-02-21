@@ -18,7 +18,7 @@ public class RadixStringTester {
             //Cycle through all 4 letters of the Strings starting with
             //the last.
             for(int k = 0; k < chars.length; k++) {
-                System.out.println(k);
+                //System.out.println(k);
                 chars[k].clear();
             }
             int zerosArrayCount = 0, onesArrayCount = 0;
@@ -36,6 +36,11 @@ public class RadixStringTester {
                     ary[indx++] = chars[j].get(k);
                 }
             }
+            /*for(int j = 0; j < chars.length; j++) {
+                for(int k = 0; k < chars[j].size(); k++) {
+                    ary[indx++] = chars[j].get(k);
+                }
+            }*/
             /*for(int j = 0; j < zerosArrayCount; j++)
             ary[indx++] = zeroes.get(j);
             for(int j = 0; j < onesArrayCount; j++)
