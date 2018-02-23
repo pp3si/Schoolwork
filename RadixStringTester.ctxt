@@ -4,4 +4,6 @@ comment1.params=args
 comment1.target=void\ main(java.lang.String[])
 comment2.params=ary
 comment2.target=void\ sort(java.lang.String[])
-numComments=3
+comment3.params=a\ red
+comment3.target=void\ sort(java.lang.String[],\ boolean)
+numComments=4

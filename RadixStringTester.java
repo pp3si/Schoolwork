@@ -48,4 +48,20 @@ public class RadixStringTester {
             mask--; //Advance the mask to the next bit
         }
     }
+    public static void sort(String[] a, boolean red) { //This will do an ascending sort
+        String min;
+        int minIndex;
+        for(int i = 0; i < a.length; i++) {
+            min = a[i];
+            minIndex = i;
+            for(int j = i+1; j < a.length; j++) {//find minimum
+                if(a[j].compareTo(min) < 0) {//salient feature
+                    min = a[j];
+                    minIndex = j;
+                }
+            }
+            a[minIndex] = a[i]; //swap
+            a[i] = min;
+        }
+    }
 }

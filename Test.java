@@ -2,7 +2,7 @@ import java.io.*;
 import java.util.*;
 public class Test {
     public static void main(String [] args) {
-        ArrayList list = new ArrayList();
+        /*ArrayList list = new ArrayList();
         list.add("A");
         list.add("B");
         list.add("C");
@@ -17,6 +17,14 @@ public class Test {
         }
         for(k = 0; k < list.size(); k++) {
             System.out.print(list.get(k) + " ");
+        }*/
+        /*for(int i = 0; i < 5; ++i) {
+            System.out.println(i);
         }
+        System.out.println("\ni++:\n");
+        for(int i = 0; i < 5; i++) {
+            System.out.println(i);
+        }*/
+        System.out.println("3".compareTo("4"));
     }
 }

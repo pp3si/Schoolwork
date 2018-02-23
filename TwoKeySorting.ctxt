@@ -2,6 +2,8 @@
 comment0.target=TwoKeySorting
 comment1.params=args
 comment1.target=void\ main(java.lang.String[])
-comment2.params=ary
-comment2.target=void\ sort(java.lang.String[])
-numComments=3
+comment2.params=a\ comp1\ comp2
+comment2.target=void\ sort(java.lang.String[],\ java.lang.String[],\ int[])
+comment3.params=name1\ age1\ name2\ age2
+comment3.target=int\ compare(java.lang.String,\ int,\ java.lang.String,\ int)
+numComments=4
