@@ -50,30 +50,45 @@ public class TwoKeySorting {
     }
     public static void sort(String[] a, String[] comp1, int[] comp2) { //This will do an ascending sort
         //I will make use of the fact that this String array is all "Name age" thank you very much.
+        //print(a);
         String min;
         int minIndex;
         for(int i = 0; i < a.length; i++) {
             min = a[i];
             minIndex = i;
+            System.out.println("\nMin is "+min+" at index "+minIndex);//
+            System.out.println("Currently deciding for index i = " + i);//
+            //print(a);//
+            //System.out.println("");//
             for(int j = i+1; j < a.length; j++) {//find minimum
                 
                 /*if(a[j].compareTo(min) < 0) {//salient feature
                     min = a[j];
                     minIndex = j;
                 }*/
-                if(compare(comp1[j], comp2[j], comp1[minIndex], comp2[minIndex]) < 0) {//salient feature
+                System.out.println("Comparing "+comp1[j]+", "+comp2[j]+" to "+comp1[minIndex]+", "+
+                    comp2[minIndex]);//
+                int compareResult = compare(comp1[j], comp2[j], comp1[minIndex], comp2[minIndex]);
+                System.out.println("Comparison result is "+compareResult);//
+                if(compareResult < 0) {//salient feature
                     min = a[j];
                     minIndex = j;
+                    
                 }
+                System.out.println("Min is "+min+" at index "+minIndex);//
             }
             a[minIndex] = a[i];
             a[i] = min;
+            //System.out.println("");//
+            //print(a);//
         }
     }
     public static int compare(String name1, int age1, String name2, int age2) {
-        if(name1.compareTo(name2) < 0) {
+        String Name1 = name1.toUpperCase();
+        String Name2 = name2.toUpperCase();
+        if(Name1.compareTo(Name2) < 0) {
             return -1;
-        } else if(name1.compareTo(name2) > 0) {
+        } else if(Name1.compareTo(Name2) > 0) {
             return 1;
         } else {
             if(age1 < age2)
@@ -81,6 +96,11 @@ public class TwoKeySorting {
             else if(age1 > age2)
             return 1;
             return 0;
+        }
+    }
+    public static void print(String[] args) {
+        for(int i = 0; i < args.length; i++) {
+            System.out.println(args[i]);
         }
     }
 }
