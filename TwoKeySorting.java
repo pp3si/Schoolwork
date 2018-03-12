@@ -52,12 +52,16 @@ public class TwoKeySorting {
         //I will make use of the fact that this String array is all "Name age" thank you very much.
         //print(a);
         String min;
+        String minName;
+        int minAge;
         int minIndex;
         for(int i = 0; i < a.length; i++) {
             min = a[i];
             minIndex = i;
-            System.out.println("\nMin is "+min+" at index "+minIndex);//
-            System.out.println("Currently deciding for index i = " + i);//
+            minName = comp1[i];
+            minAge = comp2[i];
+            //System.out.println("\nMin is "+min+" at index "+minIndex);//
+            //System.out.println("Currently deciding for index i = " + i);//
             //print(a);//
             //System.out.println("");//
             for(int j = i+1; j < a.length; j++) {//find minimum
@@ -66,19 +70,27 @@ public class TwoKeySorting {
                     min = a[j];
                     minIndex = j;
                 }*/
-                System.out.println("Comparing "+comp1[j]+", "+comp2[j]+" to "+comp1[minIndex]+", "+
-                    comp2[minIndex]);//
+                //System.out.println("Comparing "+comp1[j]+", "+comp2[j]+" to "+comp1[minIndex]+", "+
+                    //comp2[minIndex]);//
                 int compareResult = compare(comp1[j], comp2[j], comp1[minIndex], comp2[minIndex]);
-                System.out.println("Comparison result is "+compareResult);//
+                //System.out.println("Comparison result is "+compareResult);//
                 if(compareResult < 0) {//salient feature
                     min = a[j];
                     minIndex = j;
-                    
+                    minName = comp1[j];
                 }
-                System.out.println("Min is "+min+" at index "+minIndex);//
+                //System.out.println("Min is "+min+" at index "+minIndex);//
             }
             a[minIndex] = a[i];
             a[i] = min;
+            comp1[minIndex] = comp1[i];
+            comp1[i] = minName;
+            comp2[minIndex] = comp2[i];
+            comp2[i] = minAge;
+            /*System.out.println("List now reads:");
+            for(int q = 0; q < a.length; q++) {
+                System.out.println(a[q]);
+            }*/
             //System.out.println("");//
             //print(a);//
         }
